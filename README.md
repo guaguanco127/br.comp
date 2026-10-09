@@ -1,4 +1,4 @@
-# Max/MSP Patches, Abstractions, Externals, RNBO, VSTs, and Ableton Max for Live 
+# Max/MSP Patches, Abstractions, Externals, RNBO and VSTs
 
 ## br.comp.1.2
 
@@ -12,7 +12,7 @@ By Brian Riordan
 Repository for br.comp.1.2, with all related files, can be found here: [https://github.com/guaguanco127/br.comp](https://github.com/guaguanco127/br.comp)  
 Additional programs can be found here: [https://github.com/guaguanco127/br.max](https://github.com/guaguanco127/br.max)
 
-These files were created with Max 9. 
+These files were created with Max 9, or RNBO.
 
 ## Links
 
@@ -21,12 +21,14 @@ These files were created with Max 9.
 [About](#About)   
 [State outlet](#State)  
 [Max/MSP Abstraction](https://github.com/guaguanco127/br.comp/tree/main/MaxMSP%20Abstraction) To use as an abstraction within Max/MSP   
+[Max/MSP RNBO for External or VST](https://github.com/guaguanco127/br.comp/tree/main/RNBO%20Patchers%20for%20External%20or%20VST) To build your own Max external or VST/AU plugin, or to reuse the code in your own RNBO patches (needs RNBO)  
 
-This is a Max/MSP-only release (no Max for Live device).
+You can use it as an abstraction within Max/MSP. With RNBO you can also build your own Max external or plugin from the included RNBO patch.
 
 ## <a name="New12"></a>What's new in 1.2
 
 - **Two files:** br.comp.1.2 is the plain object, whose control inlets take signals as well as numbers (patch an LFO into Dry/Wet), and br.comp.ui.1.2 is the version with dials, the GR meter and the State outlet, for a [bpatcher].
+- New RNBO patch, to build your own Max external or VST/AU plugin.
 - Inlets, outlets and the sound are unchanged.
 - A new example tab, plain object: br.comp.1.2 on a drum loop, driven by number boxes and an LFO.
 
