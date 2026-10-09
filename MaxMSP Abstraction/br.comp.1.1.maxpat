@@ -1531,7 +1531,7 @@
                         853.7142850160599,
                         22.0
                     ],
-                    "text": "gen~",
+                    "text": "gen~ @title br.comp.1.1",
                     "varname": "br_comp"
                 }
             },
