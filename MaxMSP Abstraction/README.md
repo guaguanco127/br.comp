@@ -1,5 +1,5 @@
 # Max/MSP Abstractions:   
-## br.comp.1.0
+## br.comp.1.1
 
 
 
@@ -8,21 +8,29 @@ By Brian Riordan
 [brianriordanmusic@gmail.com](mailto:brianriordanmusic@gmail.com)  
 [https://www.brianriordanmusic.com/](https://www.brianriordanmusic.com/) 
   
-Repository for br.comp.1.0, with all related files, can be found here: [https://github.com/guaguanco127/br.comp](https://github.com/guaguanco127/br.comp)  
+Repository for br.comp.1.1, with all related files, can be found here: [https://github.com/guaguanco127/br.comp](https://github.com/guaguanco127/br.comp)  
 Additional programs can be found here: [https://github.com/guaguanco127/br.max](https://github.com/guaguanco127/br.max)
 
 These files were created with Max 9. 
 
 ## Table of Contents 
 
+[What's new in 1.1](#New11)  
 [About](#About)   
 [What is an abstraction?](#Abstraction)  
 [How To Install](#Install)  
 [How To Use](#Use)  
+[State outlet](#State)  
 [Example Patch](#Example)  
 [Credits](#Credits)  
  
  
+
+## <a name="New11"></a>What's new in 1.1
+
+- New [State outlet](#State) (outlet 4, the last one): it sends the settings as named messages the moment they change, so moving a control, numbers into the inlets and preset recalls all show up. Use it to keep a display, Mira or another patch in sync.
+- The inlets and the other outlets are unchanged, so 1.1 swaps in for 1.0 without rewiring.
+- The example patch has a new State outlet tab that reads the compress tab's settings by name.
 
 ## <a name="About"></a>About
 
@@ -70,11 +78,11 @@ By saving your logic in an abstraction, you can create modules that can be used 
 
 1. Make sure you have Max 9 installed in your computer. And, make sure you are using a Max patch that is inside of a folder.  
 
-2. Copy and paste br.comp.1.0.maxpat inside of the same folder as the Max patch you are using.
+2. Copy and paste br.comp.1.1.maxpat inside of the same folder as the Max patch you are using.
 
 3. To use the built-in dials, create a bpatcher object. Then, go inside of its inspector, select "choose" next to "Patcher File" and select the abstraction located within the same folder as your project. Size the bpatcher to 247 x 131 to show all of the controls.
 
-4. Alternatively, create an object with the abstraction's name ([br.comp.1.0], do not include brackets) and control it through its inlets (see below).
+4. Alternatively, create an object with the abstraction's name ([br.comp.1.1], do not include brackets) and control it through its inlets (see below).
 
 ## <a name="Use"></a>How To Use
 
@@ -102,6 +110,7 @@ Every control has its own inlet, in the order listed below. Sending a value to a
 | 1 | Left Out: compressed audio | Signal |
 | 2 | Right Out: compressed audio | Signal |
 | 3 | Gain Reduction in dB, positive: 0 = none, 6 = turned down 6 dB | Signal |
+| 4 | State: the settings as named messages, see [State outlet](#State) | Message |
 
 **Ideas:**
 - Mono: send the same signal into Left and Right and use one outlet.
@@ -109,12 +118,32 @@ Every control has its own inlet, in the order listed below. Sending a value to a
 - De-essing: a highpassed or bandpassed copy of a voice (2 - 8 kHz) into the Sidechain inlets, so only the sibilance triggers the compressor.
 - Ducking something else: the Gain Reduction outlet through [*~ -1] and [dbtoa~] gives a gain you can multiply any other sound by.
 
+## <a name="State"></a>State outlet
+
+The last outlet (State) sends the current settings as named messages the moment they change, for example `threshold -18.`, `ratio 4.`, `sidechain 1`. Use it to keep a display, Mira or another patch in sync. Pick them out by name with [route threshold ratio attack release knee makeup automakeup drywet detect sidechain], not by position, so your patch keeps working if a later version adds controls. Repeats are filtered out.
+
+| Message | Type | Range |
+|---|---|---|
+| threshold | Float | dB, -60 to 0 |
+| ratio | Float | 1 to 20 (N:1) |
+| attack | Float | ms, 0.1 to 200 |
+| release | Float | ms, 5 to 2000 |
+| knee | Float | dB, 0 to 24 |
+| makeup | Float | dB, -12 to 24 |
+| automakeup | Int | 0 = off, 1 = on |
+| drywet | Float | %, 0 to 100 |
+| detect | Float | %, 0 (peak) to 100 (RMS) |
+| sidechain | Int | 0 = off, 1 = on |
+
+Each message carries the same value its inlet takes, so a State message can go straight back into an inlet. The example patch has a State outlet tab that shows this.
+
 ## <a name="Example"></a>Example Patch
 
-Open _br.comp.example.1.0.maxpat (keep it in the same folder as the abstraction). The first page introduces br.comp; the tabs at the top hold the examples. Turn on the audio with the toggle, then raise the gain slider, which starts muted.
+Open _br.comp.example.1.1.maxpat (keep it in the same folder as the abstraction). The first page introduces br.comp; the tabs at the top hold the examples. Turn on the audio with the toggle, then raise the gain slider, which starts muted.
 
 - **compress:** Pick a source (a drum loop, a voice, plucks at random levels, or a microphone) and shape it. Bring Threshold down until the GR meter moves on the loud parts, then set Ratio, Attack and Release, and use Makeup (or Auto Makeup) to bring the level back. Try Dry/Wet at 50 % for parallel compression.
 - **sidechain:** A drone goes into Left / Right and a drum loop into the Sidechain inlets, with Sidechain on, so the drone ducks on every hit. Turn Sidechain off and the ducking stops. Turn on "drums in the mix" to hear what it ducks against.
+- **State outlet:** The compress tab's settings, read by name with [route] into number boxes. Move a dial and its number follows.
 
 ## <a name="Credits"></a>Credits
 

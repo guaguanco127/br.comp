@@ -15,7 +15,7 @@
             1000.0,
             640.0
         ],
-        "description": "_br.comp.example.1.0 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/ -- Credits: soft-knee gain computer and dB-domain gain smoothing from D. Giannoulis, M. Massberg and J. D. Reiss, \"Digital Dynamic Range Compressor Design -- A Tutorial and Analysis\", Journal of the Audio Engineering Society 60(6), 2012.",
+        "description": "_br.comp.example.1.1 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/ -- Credits: soft-knee gain computer and dB-domain gain smoothing from D. Giannoulis, M. Massberg and J. D. Reiss, \"Digital Dynamic Range Compressor Design -- A Tutorial and Analysis\", Journal of the Audio Engineering Society 60(6), 2012.",
         "showontab": 1,
         "boxes": [
             {
@@ -33,7 +33,7 @@
                         662.0,
                         60.0
                     ],
-                    "text": "_br.comp.example.1.0 -- Created by Brian Riordan, guaguanco127@gmail.com\nhttps://github.com/guaguanco127/\nCredits: soft-knee gain computer and dB-domain gain smoothing from D. Giannoulis, M. Massberg and J. D. Reiss, \"Digital Dynamic Range Compressor Design -- A Tutorial and Analysis\", Journal of the Audio Engineering Society 60(6), 2012."
+                    "text": "_br.comp.example.1.1 -- Created by Brian Riordan, guaguanco127@gmail.com\nhttps://github.com/guaguanco127/\nCredits: soft-knee gain computer and dB-domain gain smoothing from D. Giannoulis, M. Massberg and J. D. Reiss, \"Digital Dynamic Range Compressor Design -- A Tutorial and Analysis\", Journal of the Audio Engineering Society 60(6), 2012."
                 }
             },
             {
@@ -102,9 +102,9 @@
                         15.0,
                         173.0,
                         560.0,
-                        33.0
+                        47.0
                     ],
-                    "text": "Outlets: L, R, and the gain reduction in dB as a signal (0 = none). Every control glides 10 ms inside, so moves never click. Silent input costs almost no CPU."
+                    "text": "Outlets: L, R, the gain reduction in dB as a signal (0 = none), and State last: the settings as named messages the moment a control changes (see the State outlet tab). Every control glides 10 ms inside, so moves never click. Silent input costs almost no CPU."
                 }
             },
             {
@@ -118,11 +118,11 @@
                     "numoutlets": 0,
                     "patching_rect": [
                         15.0,
-                        220.0,
+                        234.0,
                         387.0,
-                        47.0
+                        61.0
                     ],
-                    "text": "Tabs:\n  compress: pick a source and shape it\n  sidechain: a drone ducked by a drum loop through the sidechain inlets"
+                    "text": "Tabs:\n  compress: pick a source and shape it\n  sidechain: a drone ducked by a drum loop through the sidechain inlets\n  State outlet: the compress tab's settings, read by name"
                 }
             },
             {
@@ -135,7 +135,7 @@
                     "numoutlets": 0,
                     "patching_rect": [
                         15.0,
-                        280.0,
+                        308.0,
                         560.0,
                         20.0
                     ],
@@ -152,7 +152,7 @@
                     "numoutlets": 0,
                     "patching_rect": [
                         15.0,
-                        305.0,
+                        333.0,
                         300.0,
                         20.0
                     ],
@@ -166,7 +166,7 @@
                     "id": "obj-9",
                     "maxclass": "newobj",
                     "numinlets": 0,
-                    "numoutlets": 0,
+                    "numoutlets": 1,
                     "patcher": {
                         "fileversion": 1,
                         "appversion": {
@@ -1794,9 +1794,9 @@
                                     "lockeddragscroll": 0,
                                     "lockedsize": 0,
                                     "maxclass": "bpatcher",
-                                    "name": "br.comp.1.0.maxpat",
+                                    "name": "br.comp.1.1.maxpat",
                                     "numinlets": 14,
-                                    "numoutlets": 3,
+                                    "numoutlets": 4,
                                     "offset": [
                                         0.0,
                                         0.0
@@ -1804,7 +1804,8 @@
                                     "outlettype": [
                                         "signal",
                                         "signal",
-                                        "signal"
+                                        "signal",
+                                        ""
                                     ],
                                     "patching_rect": [
                                         330.0,
@@ -1829,7 +1830,7 @@
                                         120.0,
                                         20.0
                                     ],
-                                    "text": "br.comp.1.0"
+                                    "text": "br.comp.1.1"
                                 }
                             },
                             {
@@ -1938,6 +1939,22 @@
                                         22.0
                                     ],
                                     "text": "dac~ 1 2"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "comment": "State of br.comp (to the State outlet tab)",
+                                    "id": "obj-19",
+                                    "index": 1,
+                                    "maxclass": "outlet",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        600.0,
+                                        300.0,
+                                        30.0,
+                                        30.0
+                                    ]
                                 }
                             }
                         ],
@@ -2051,16 +2068,31 @@
                                         0
                                     ]
                                 }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "obj-12",
+                                        3
+                                    ],
+                                    "destination": [
+                                        "obj-19",
+                                        0
+                                    ]
+                                }
                             }
                         ]
                     },
                     "patching_rect": [
                         15.0,
-                        340.0,
+                        368.0,
                         80.0,
                         22.0
                     ],
-                    "text": "p compress"
+                    "text": "p compress",
+                    "outlettype": [
+                        ""
+                    ]
                 }
             },
             {
@@ -2384,9 +2416,9 @@
                                     "lockeddragscroll": 0,
                                     "lockedsize": 0,
                                     "maxclass": "bpatcher",
-                                    "name": "br.comp.1.0.maxpat",
+                                    "name": "br.comp.1.1.maxpat",
                                     "numinlets": 14,
-                                    "numoutlets": 3,
+                                    "numoutlets": 4,
                                     "offset": [
                                         0.0,
                                         0.0
@@ -2394,7 +2426,8 @@
                                     "outlettype": [
                                         "signal",
                                         "signal",
-                                        "signal"
+                                        "signal",
+                                        ""
                                     ],
                                     "patching_rect": [
                                         330.0,
@@ -2419,7 +2452,7 @@
                                         120.0,
                                         20.0
                                     ],
-                                    "text": "br.comp.1.0"
+                                    "text": "br.comp.1.1"
                                 }
                             },
                             {
@@ -3107,15 +3140,642 @@
                     },
                     "patching_rect": [
                         105.0,
-                        340.0,
+                        368.0,
                         80.0,
                         22.0
                     ],
                     "text": "p sidechain"
                 }
+            },
+            {
+                "box": {
+                    "fontname": "Arial",
+                    "fontsize": 12.0,
+                    "id": "obj-state",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        15.0,
+                        403.0,
+                        128.0,
+                        22.0
+                    ],
+                    "text": "p \"State outlet\"",
+                    "patcher": {
+                        "fileversion": 1,
+                        "appversion": {
+                            "major": 9,
+                            "minor": 1,
+                            "revision": 4,
+                            "architecture": "x64",
+                            "modernui": 1
+                        },
+                        "classnamespace": "box",
+                        "rect": [
+                            0.0,
+                            26.0,
+                            838.0,
+                            400.0
+                        ],
+                        "showontab": 1,
+                        "boxes": [
+                            {
+                                "box": {
+                                    "comment": "State from the compress tab",
+                                    "id": "obj-1",
+                                    "index": 1,
+                                    "maxclass": "inlet",
+                                    "numinlets": 0,
+                                    "numoutlets": 1,
+                                    "outlettype": [
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        30.0,
+                                        95.0,
+                                        30.0,
+                                        30.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "fontname": "Arial",
+                                    "fontsize": 12.0,
+                                    "id": "obj-2",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        30.0,
+                                        15.0,
+                                        600.0,
+                                        60.0
+                                    ],
+                                    "text": "br.comp sends its state out of its LAST outlet as named messages, the moment a control changes (dial moves, numbers into the inlets, preset recalls). Read them by NAME with [route threshold ratio attack release knee makeup automakeup drywet detect sidechain], never by position: names stay put when a tool gains controls."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "fontname": "Arial",
+                                    "fontsize": 12.0,
+                                    "id": "obj-3",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        70.0,
+                                        100.0,
+                                        200.0,
+                                        20.0
+                                    ],
+                                    "text": "the compress tab"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "fontname": "Arial",
+                                    "fontsize": 12.0,
+                                    "id": "obj-4",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 11,
+                                    "outlettype": [
+                                        "",
+                                        "",
+                                        "",
+                                        "",
+                                        "",
+                                        "",
+                                        "",
+                                        "",
+                                        "",
+                                        "",
+                                        ""
+                                    ],
+                                    "patching_rect": [
+                                        30.0,
+                                        135.0,
+                                        647.0,
+                                        22.0
+                                    ],
+                                    "text": "route threshold ratio attack release knee makeup automakeup drywet detect sidechain"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-5",
+                                    "maxclass": "flonum",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "",
+                                        "bang"
+                                    ],
+                                    "parameter_enable": 0,
+                                    "patching_rect": [
+                                        30.0,
+                                        170.0,
+                                        50.0,
+                                        22.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "fontname": "Arial",
+                                    "fontsize": 12.0,
+                                    "id": "obj-6",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        30.0,
+                                        195.0,
+                                        74,
+                                        20.0
+                                    ],
+                                    "text": "threshold"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-7",
+                                    "maxclass": "flonum",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "",
+                                        "bang"
+                                    ],
+                                    "parameter_enable": 0,
+                                    "patching_rect": [
+                                        119.0,
+                                        170.0,
+                                        50.0,
+                                        22.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "fontname": "Arial",
+                                    "fontsize": 12.0,
+                                    "id": "obj-8",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        119.0,
+                                        195.0,
+                                        44,
+                                        20.0
+                                    ],
+                                    "text": "ratio"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-9",
+                                    "maxclass": "flonum",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "",
+                                        "bang"
+                                    ],
+                                    "parameter_enable": 0,
+                                    "patching_rect": [
+                                        189.0,
+                                        170.0,
+                                        50.0,
+                                        22.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "fontname": "Arial",
+                                    "fontsize": 12.0,
+                                    "id": "obj-10",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        189.0,
+                                        195.0,
+                                        52,
+                                        20.0
+                                    ],
+                                    "text": "attack"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-11",
+                                    "maxclass": "flonum",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "",
+                                        "bang"
+                                    ],
+                                    "parameter_enable": 0,
+                                    "patching_rect": [
+                                        259.0,
+                                        170.0,
+                                        50.0,
+                                        22.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "fontname": "Arial",
+                                    "fontsize": 12.0,
+                                    "id": "obj-12",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        259.0,
+                                        195.0,
+                                        59,
+                                        20.0
+                                    ],
+                                    "text": "release"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-13",
+                                    "maxclass": "flonum",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "",
+                                        "bang"
+                                    ],
+                                    "parameter_enable": 0,
+                                    "patching_rect": [
+                                        333.0,
+                                        170.0,
+                                        50.0,
+                                        22.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "fontname": "Arial",
+                                    "fontsize": 12.0,
+                                    "id": "obj-14",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        333.0,
+                                        195.0,
+                                        40.0,
+                                        20.0
+                                    ],
+                                    "text": "knee"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-15",
+                                    "maxclass": "flonum",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "",
+                                        "bang"
+                                    ],
+                                    "parameter_enable": 0,
+                                    "patching_rect": [
+                                        403.0,
+                                        170.0,
+                                        50.0,
+                                        22.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "fontname": "Arial",
+                                    "fontsize": 12.0,
+                                    "id": "obj-16",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        403.0,
+                                        195.0,
+                                        52,
+                                        20.0
+                                    ],
+                                    "text": "makeup"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-17",
+                                    "maxclass": "number",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "",
+                                        "bang"
+                                    ],
+                                    "parameter_enable": 0,
+                                    "patching_rect": [
+                                        473.0,
+                                        170.0,
+                                        50.0,
+                                        22.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "fontname": "Arial",
+                                    "fontsize": 12.0,
+                                    "id": "obj-18",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        473.0,
+                                        195.0,
+                                        81,
+                                        20.0
+                                    ],
+                                    "text": "automakeup"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-19",
+                                    "maxclass": "flonum",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "",
+                                        "bang"
+                                    ],
+                                    "parameter_enable": 0,
+                                    "patching_rect": [
+                                        569.0,
+                                        170.0,
+                                        50.0,
+                                        22.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "fontname": "Arial",
+                                    "fontsize": 12.0,
+                                    "id": "obj-20",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        569.0,
+                                        195.0,
+                                        52,
+                                        20.0
+                                    ],
+                                    "text": "drywet"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-21",
+                                    "maxclass": "flonum",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "",
+                                        "bang"
+                                    ],
+                                    "parameter_enable": 0,
+                                    "patching_rect": [
+                                        639.0,
+                                        170.0,
+                                        50.0,
+                                        22.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "fontname": "Arial",
+                                    "fontsize": 12.0,
+                                    "id": "obj-22",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        639.0,
+                                        195.0,
+                                        52,
+                                        20.0
+                                    ],
+                                    "text": "detect"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-23",
+                                    "maxclass": "number",
+                                    "numinlets": 1,
+                                    "numoutlets": 2,
+                                    "outlettype": [
+                                        "",
+                                        "bang"
+                                    ],
+                                    "parameter_enable": 0,
+                                    "patching_rect": [
+                                        709.0,
+                                        170.0,
+                                        50.0,
+                                        22.0
+                                    ]
+                                }
+                            },
+                            {
+                                "box": {
+                                    "fontname": "Arial",
+                                    "fontsize": 12.0,
+                                    "id": "obj-24",
+                                    "maxclass": "comment",
+                                    "numinlets": 1,
+                                    "numoutlets": 0,
+                                    "patching_rect": [
+                                        709.0,
+                                        195.0,
+                                        74,
+                                        20.0
+                                    ],
+                                    "text": "sidechain"
+                                }
+                            }
+                        ],
+                        "lines": [
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "obj-1",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "obj-4",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "obj-4",
+                                        0
+                                    ],
+                                    "destination": [
+                                        "obj-5",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "obj-4",
+                                        1
+                                    ],
+                                    "destination": [
+                                        "obj-7",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "obj-4",
+                                        2
+                                    ],
+                                    "destination": [
+                                        "obj-9",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "obj-4",
+                                        3
+                                    ],
+                                    "destination": [
+                                        "obj-11",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "obj-4",
+                                        4
+                                    ],
+                                    "destination": [
+                                        "obj-13",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "obj-4",
+                                        5
+                                    ],
+                                    "destination": [
+                                        "obj-15",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "obj-4",
+                                        6
+                                    ],
+                                    "destination": [
+                                        "obj-17",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "obj-4",
+                                        7
+                                    ],
+                                    "destination": [
+                                        "obj-19",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "obj-4",
+                                        8
+                                    ],
+                                    "destination": [
+                                        "obj-21",
+                                        0
+                                    ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "source": [
+                                        "obj-4",
+                                        9
+                                    ],
+                                    "destination": [
+                                        "obj-23",
+                                        0
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
             }
         ],
-        "lines": [],
+        "lines": [
+            {
+                "patchline": {
+                    "source": [
+                        "obj-9",
+                        0
+                    ],
+                    "destination": [
+                        "obj-state",
+                        0
+                    ]
+                }
+            }
+        ],
         "parameters": {
             "obj-10::obj-16::obj-16": [
                 "Threshold",
