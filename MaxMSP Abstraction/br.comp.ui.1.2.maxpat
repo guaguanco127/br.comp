@@ -18,7 +18,7 @@
         "openrectmode": 0,
         "openinpresentation": 1,
         "devicewidth": 246.0,
-        "description": "br.comp.1.1 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/ -- Credits: soft-knee gain computer and dB-domain gain smoothing from D. Giannoulis, M. Massberg and J. D. Reiss, \"Digital Dynamic Range Compressor Design -- A Tutorial and Analysis\", Journal of the Audio Engineering Society 60(6), 2012.",
+        "description": "br.comp.ui.1.2 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/ -- Credits: soft-knee gain computer and dB-domain gain smoothing from D. Giannoulis, M. Massberg and J. D. Reiss, \"Digital Dynamic Range Compressor Design -- A Tutorial and Analysis\", Journal of the Audio Engineering Society 60(6), 2012.",
         "boxes": [
             {
                 "box": {
@@ -35,7 +35,7 @@
                         662.0,
                         60.0
                     ],
-                    "text": "br.comp.1.1 -- Created by Brian Riordan, guaguanco127@gmail.com\nhttps://github.com/guaguanco127/\nCredits: soft-knee gain computer and dB-domain gain smoothing from D. Giannoulis, M. Massberg and J. D. Reiss, \"Digital Dynamic Range Compressor Design -- A Tutorial and Analysis\", Journal of the Audio Engineering Society 60(6), 2012."
+                    "text": "br.comp.ui.1.2 -- Created by Brian Riordan, guaguanco127@gmail.com\nhttps://github.com/guaguanco127/\nCredits: soft-knee gain computer and dB-domain gain smoothing from D. Giannoulis, M. Massberg and J. D. Reiss, \"Digital Dynamic Range Compressor Design -- A Tutorial and Analysis\", Journal of the Audio Engineering Society 60(6), 2012."
                 }
             },
             {
@@ -346,7 +346,7 @@
                                 -18.0
                             ],
                             "parameter_initial_enable": 1,
-                            "parameter_longname": "Threshold[1]",
+                            "parameter_longname": "Threshold",
                             "parameter_mmax": 0.0,
                             "parameter_mmin": -60.0,
                             "parameter_modmode": 0,
@@ -407,7 +407,7 @@
                                 4.0
                             ],
                             "parameter_initial_enable": 1,
-                            "parameter_longname": "Ratio[1]",
+                            "parameter_longname": "Ratio",
                             "parameter_mmax": 20.0,
                             "parameter_mmin": 1.0,
                             "parameter_modmode": 0,
@@ -468,7 +468,7 @@
                                 10.0
                             ],
                             "parameter_initial_enable": 1,
-                            "parameter_longname": "Attack[1]",
+                            "parameter_longname": "Attack",
                             "parameter_mmax": 200.0,
                             "parameter_mmin": 0.1,
                             "parameter_modmode": 0,
@@ -529,7 +529,7 @@
                                 150.0
                             ],
                             "parameter_initial_enable": 1,
-                            "parameter_longname": "Release[1]",
+                            "parameter_longname": "Release",
                             "parameter_mmax": 2000.0,
                             "parameter_mmin": 5.0,
                             "parameter_modmode": 0,
@@ -589,7 +589,7 @@
                                 6.0
                             ],
                             "parameter_initial_enable": 1,
-                            "parameter_longname": "Knee[1]",
+                            "parameter_longname": "Knee",
                             "parameter_mmax": 24.0,
                             "parameter_modmode": 0,
                             "parameter_shortname": "Knee",
@@ -648,7 +648,7 @@
                                 0.0
                             ],
                             "parameter_initial_enable": 1,
-                            "parameter_longname": "Makeup[1]",
+                            "parameter_longname": "Makeup",
                             "parameter_mmax": 24.0,
                             "parameter_mmin": -12.0,
                             "parameter_modmode": 0,
@@ -700,7 +700,7 @@
                                 0
                             ],
                             "parameter_initial_enable": 1,
-                            "parameter_longname": "Auto Makeup[1]",
+                            "parameter_longname": "Auto Makeup",
                             "parameter_mmax": 1,
                             "parameter_modmode": 0,
                             "parameter_shortname": "Auto Makeup",
@@ -754,7 +754,7 @@
                                 100.0
                             ],
                             "parameter_initial_enable": 1,
-                            "parameter_longname": "Dry/Wet[1]",
+                            "parameter_longname": "Dry/Wet",
                             "parameter_mmax": 100.0,
                             "parameter_modmode": 0,
                             "parameter_shortname": "Dry/Wet",
@@ -769,26 +769,6 @@
                         1.0
                     ],
                     "varname": "DryWet"
-                }
-            },
-            {
-                "box": {
-                    "fontname": "Arial",
-                    "fontsize": 12.0,
-                    "id": "obj-32",
-                    "maxclass": "newobj",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        "float"
-                    ],
-                    "patching_rect": [
-                        708.0,
-                        320.0,
-                        58.0,
-                        22.0
-                    ],
-                    "text": "/ 100."
                 }
             },
             {
@@ -833,7 +813,7 @@
                                 0.0
                             ],
                             "parameter_initial_enable": 1,
-                            "parameter_longname": "Detect[1]",
+                            "parameter_longname": "Detect",
                             "parameter_mmax": 100.0,
                             "parameter_modmode": 0,
                             "parameter_shortname": "RMS",
@@ -848,26 +828,6 @@
                         1.0
                     ],
                     "varname": "Detect"
-                }
-            },
-            {
-                "box": {
-                    "fontname": "Arial",
-                    "fontsize": 12.0,
-                    "id": "obj-35",
-                    "maxclass": "newobj",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        "float"
-                    ],
-                    "patching_rect": [
-                        782.725278377533,
-                        320.0,
-                        58.0,
-                        22.0
-                    ],
-                    "text": "/ 100."
                 }
             },
             {
@@ -904,7 +864,7 @@
                                 0
                             ],
                             "parameter_initial_enable": 1,
-                            "parameter_longname": "Sidechain[1]",
+                            "parameter_longname": "Sidechain",
                             "parameter_mmax": 1,
                             "parameter_modmode": 0,
                             "parameter_shortname": "Sidechain",
@@ -918,10 +878,11 @@
             },
             {
                 "box": {
+                    "id": "obj-38",
                     "fontname": "Arial",
                     "fontsize": 12.0,
-                    "id": "obj-38",
                     "maxclass": "newobj",
+                    "text": "br.comp.1.2",
                     "numinlets": 14,
                     "numoutlets": 3,
                     "outlettype": [
@@ -929,610 +890,12 @@
                         "signal",
                         "signal"
                     ],
-                    "patcher": {
-                        "fileversion": 1,
-                        "appversion": {
-                            "major": 9,
-                            "minor": 1,
-                            "revision": 4,
-                            "architecture": "x64",
-                            "modernui": 1
-                        },
-                        "classnamespace": "dsp.gen",
-                        "rect": [
-                            100.0,
-                            100.0,
-                            600.0,
-                            450.0
-                        ],
-                        "boxes": [
-                            {
-                                "box": {
-                                    "fontname": "Arial",
-                                    "fontsize": 12.0,
-                                    "id": "obj-1",
-                                    "linecount": 7,
-                                    "maxclass": "newobj",
-                                    "numinlets": 0,
-                                    "numoutlets": 1,
-                                    "outlettype": [
-                                        ""
-                                    ],
-                                    "patching_rect": [
-                                        50.0,
-                                        20.0,
-                                        30.0,
-                                        22.0
-                                    ],
-                                    "text": "in 1 @comment Audio L"
-                                }
-                            },
-                            {
-                                "box": {
-                                    "fontname": "Arial",
-                                    "fontsize": 12.0,
-                                    "id": "obj-2",
-                                    "linecount": 7,
-                                    "maxclass": "newobj",
-                                    "numinlets": 0,
-                                    "numoutlets": 1,
-                                    "outlettype": [
-                                        ""
-                                    ],
-                                    "patching_rect": [
-                                        130.0,
-                                        20.0,
-                                        30.0,
-                                        22.0
-                                    ],
-                                    "text": "in 2 @comment Audio R"
-                                }
-                            },
-                            {
-                                "box": {
-                                    "fontname": "Arial",
-                                    "fontsize": 12.0,
-                                    "id": "obj-3",
-                                    "linecount": 10,
-                                    "maxclass": "newobj",
-                                    "numinlets": 0,
-                                    "numoutlets": 1,
-                                    "outlettype": [
-                                        ""
-                                    ],
-                                    "patching_rect": [
-                                        210.0,
-                                        20.0,
-                                        30.0,
-                                        22.0
-                                    ],
-                                    "text": "in 3 @comment Sidechain key L"
-                                }
-                            },
-                            {
-                                "box": {
-                                    "fontname": "Arial",
-                                    "fontsize": 12.0,
-                                    "id": "obj-4",
-                                    "linecount": 10,
-                                    "maxclass": "newobj",
-                                    "numinlets": 0,
-                                    "numoutlets": 1,
-                                    "outlettype": [
-                                        ""
-                                    ],
-                                    "patching_rect": [
-                                        290.0,
-                                        20.0,
-                                        30.0,
-                                        22.0
-                                    ],
-                                    "text": "in 4 @comment Sidechain key R"
-                                }
-                            },
-                            {
-                                "box": {
-                                    "fontname": "Arial",
-                                    "fontsize": 12.0,
-                                    "id": "obj-5",
-                                    "linecount": 11,
-                                    "maxclass": "newobj",
-                                    "numinlets": 0,
-                                    "numoutlets": 1,
-                                    "outlettype": [
-                                        ""
-                                    ],
-                                    "patching_rect": [
-                                        370.0,
-                                        20.0,
-                                        30.0,
-                                        22.0
-                                    ],
-                                    "text": "in 5 @comment Threshold dB -60 to 0"
-                                }
-                            },
-                            {
-                                "box": {
-                                    "fontname": "Arial",
-                                    "fontsize": 12.0,
-                                    "id": "obj-6",
-                                    "linecount": 10,
-                                    "maxclass": "newobj",
-                                    "numinlets": 0,
-                                    "numoutlets": 1,
-                                    "outlettype": [
-                                        ""
-                                    ],
-                                    "patching_rect": [
-                                        450.0,
-                                        20.0,
-                                        30.0,
-                                        22.0
-                                    ],
-                                    "text": "in 6 @comment Ratio N:1 1 to 20"
-                                }
-                            },
-                            {
-                                "box": {
-                                    "fontname": "Arial",
-                                    "fontsize": 12.0,
-                                    "id": "obj-7",
-                                    "linecount": 11,
-                                    "maxclass": "newobj",
-                                    "numinlets": 0,
-                                    "numoutlets": 1,
-                                    "outlettype": [
-                                        ""
-                                    ],
-                                    "patching_rect": [
-                                        530.0,
-                                        20.0,
-                                        30.0,
-                                        22.0
-                                    ],
-                                    "text": "in 7 @comment Attack ms 0.1 to 200"
-                                }
-                            },
-                            {
-                                "box": {
-                                    "fontname": "Arial",
-                                    "fontsize": 12.0,
-                                    "id": "obj-8",
-                                    "linecount": 12,
-                                    "maxclass": "newobj",
-                                    "numinlets": 0,
-                                    "numoutlets": 1,
-                                    "outlettype": [
-                                        ""
-                                    ],
-                                    "patching_rect": [
-                                        610.0,
-                                        20.0,
-                                        30.0,
-                                        22.0
-                                    ],
-                                    "text": "in 8 @comment Release ms 5 to 2000"
-                                }
-                            },
-                            {
-                                "box": {
-                                    "fontname": "Arial",
-                                    "fontsize": 12.0,
-                                    "id": "obj-9",
-                                    "linecount": 10,
-                                    "maxclass": "newobj",
-                                    "numinlets": 0,
-                                    "numoutlets": 1,
-                                    "outlettype": [
-                                        ""
-                                    ],
-                                    "patching_rect": [
-                                        690.0,
-                                        20.0,
-                                        30.0,
-                                        22.0
-                                    ],
-                                    "text": "in 9 @comment Knee dB 0 to 24"
-                                }
-                            },
-                            {
-                                "box": {
-                                    "fontname": "Arial",
-                                    "fontsize": 12.0,
-                                    "id": "obj-10",
-                                    "linecount": 13,
-                                    "maxclass": "newobj",
-                                    "numinlets": 0,
-                                    "numoutlets": 1,
-                                    "outlettype": [
-                                        ""
-                                    ],
-                                    "patching_rect": [
-                                        770.0,
-                                        20.0,
-                                        30.0,
-                                        22.0
-                                    ],
-                                    "text": "in 10 @comment Makeup dB -12 to 24"
-                                }
-                            },
-                            {
-                                "box": {
-                                    "fontname": "Arial",
-                                    "fontsize": 12.0,
-                                    "id": "obj-11",
-                                    "linecount": 12,
-                                    "maxclass": "newobj",
-                                    "numinlets": 0,
-                                    "numoutlets": 1,
-                                    "outlettype": [
-                                        ""
-                                    ],
-                                    "patching_rect": [
-                                        850.0,
-                                        20.0,
-                                        30.0,
-                                        22.0
-                                    ],
-                                    "text": "in 11 @comment Auto makeup 0/1"
-                                }
-                            },
-                            {
-                                "box": {
-                                    "fontname": "Arial",
-                                    "fontsize": 12.0,
-                                    "id": "obj-12",
-                                    "linecount": 10,
-                                    "maxclass": "newobj",
-                                    "numinlets": 0,
-                                    "numoutlets": 1,
-                                    "outlettype": [
-                                        ""
-                                    ],
-                                    "patching_rect": [
-                                        930.0,
-                                        20.0,
-                                        30.0,
-                                        22.0
-                                    ],
-                                    "text": "in 12 @comment Dry/wet 0 to 1"
-                                }
-                            },
-                            {
-                                "box": {
-                                    "fontname": "Arial",
-                                    "fontsize": 12.0,
-                                    "id": "obj-13",
-                                    "linecount": 14,
-                                    "maxclass": "newobj",
-                                    "numinlets": 0,
-                                    "numoutlets": 1,
-                                    "outlettype": [
-                                        ""
-                                    ],
-                                    "patching_rect": [
-                                        1010.0,
-                                        20.0,
-                                        30.0,
-                                        22.0
-                                    ],
-                                    "text": "in 13 @comment Detect 0 peak to 1 RMS"
-                                }
-                            },
-                            {
-                                "box": {
-                                    "fontname": "Arial",
-                                    "fontsize": 12.0,
-                                    "id": "obj-14",
-                                    "linecount": 11,
-                                    "maxclass": "newobj",
-                                    "numinlets": 0,
-                                    "numoutlets": 1,
-                                    "outlettype": [
-                                        ""
-                                    ],
-                                    "patching_rect": [
-                                        1090.0,
-                                        20.0,
-                                        30.0,
-                                        22.0
-                                    ],
-                                    "text": "in 14 @comment Sidechain on 0/1"
-                                }
-                            },
-                            {
-                                "box": {
-                                    "code": "// br.comp.1.1 -- linked stereo compressor (DSP = the tested internal br.comp.1.2)\n// Full idle mode: silent inputs + fully released + controls settled -> skip everything\n// Skips work that isn't needed:\n//   - constant math computed once, again only if the samplerate changes\n//   - attack/release coefficients recomputed only when attack/release move\n//   - below the knee: no log, gain reduction is exactly 0\n//   - fully released: no dbtoa, the output gain is cached\n// Every stored value is read first and written last, never read after a write.\n// in1/in2 audio L/R, in3/in4 sidechain key L/R\n// in5-in14 controls: send plain floats, no prepend, or signals\n// out1/out2 audio L/R, out3 gain reduction in dB, positive, 0 = none\n\n// detector + gain state\nHistory ms_env(0);\nHistory gr_db(0);\n// 10 ms smoothed controls\nHistory th_s(-18);\nHistory ra_s(4);\nHistory at_s(10);\nHistory re_s(150);\nHistory kn_s(6);\nHistory mk_s(0);\nHistory am_s(0);\nHistory dw_s(1);\nHistory de_s(0);\nHistory sc_s(0);\n// cached math and the values it was computed for\nHistory sr_last(0);\nHistory c10_c(0);\nHistory at_last(-1);\nHistory aa_c(0);\nHistory re_last(-1);\nHistory ar_c(0);\nHistory knee_key_th(1000);\nHistory knee_key_kn(-1);\nHistory klin_c(0);\nHistory base_last(-1000);\nHistory gst_c(1);\n// idle mode: raw control inputs last seen, and whether every smoother had reached its target\nHistory settled_s(0);\nHistory r5(0);\nHistory r6(0);\nHistory r7(0);\nHistory r8(0);\nHistory r9(0);\nHistory r10(0);\nHistory r11(0);\nHistory r12(0);\nHistory r13(0);\nHistory r14(0);\n\n// --- constants: once, and again if the samplerate changes ---\nsr = samplerate;\nsr_new = sr != sr_last;\nc10 = c10_c;\nif (sr_new) {\n    c10 = exp(-1 / mstosamps(10));\n}\n\n// --- idle test: silent, RMS below the knee, nothing moving ---\n// below the knee the gain computer is exactly 0, so the only live work is the release and RMS decay\nq = max(max(abs(in1), abs(in2)), max(abs(in3), abs(in4)));\nquiet = q < 0.000001;\nsame = in5 == r5 && in6 == r6 && in7 == r7 && in8 == r8 && in9 == r9 && in10 == r10 && in11 == r11 && in12 == r12 && in13 == r13 && in14 == r14;\nidle = quiet && same && settled_s > 0.5 && ms_env < klin_c * klin_c && !sr_new;\n\n// defaults = stored state, which is exactly what idle keeps\nthreshold = 0;\nratio = 0;\nattack = 0;\nrelease = 0;\nknee = 0;\nmakeup = 0;\nautomakeup = 0;\ndrywet = 0;\ndetect = 0;\nsidechain = 0;\nth = th_s;\nra = ra_s;\nat = at_s;\nre = re_s;\nkn = kn_s;\nmk = mk_s;\nam = am_s;\ndw = dw_s;\nde = de_s;\nsc = sc_s;\naa = aa_c;\nar = ar_c;\nw = 0;\nklin = klin_c;\nkl = 0;\nkr = 0;\npk = 0;\nms = 0;\nlvl = 0;\nslope = 0;\ngc = 0;\nx_db = 0;\nover = 0;\nk = 0;\ng_prev = 0;\ncoef = 0;\ng = 0;\nauto_db = 0;\nbase = base_last;\ngst = gst_c;\ngain = gst_c;\nsettled = settled_s;\n\nif (!idle) {\n    // --- controls from inlets, clamped to safe ranges ---\n    // an unset inlet reads 0: ratio clamps to 1 = no compression, drywet 0 = dry\n    threshold = clamp(in5, -60, 0);\n    ratio = clamp(in6, 1, 20);\n    attack = clamp(in7, 0.1, 200);\n    release = clamp(in8, 5, 2000);\n    knee = clamp(in9, 0, 24);\n    makeup = clamp(in10, -12, 24);\n    automakeup = clamp(in11, 0, 1);\n    drywet = clamp(in12, 0, 1);\n    detect = clamp(in13, 0, 1);\n    sidechain = clamp(in14, 0, 1);\n\n    // --- 10 ms smoothing that snaps exactly onto the target once within a hair ---\n    // snapping makes a settled control exactly constant, so the change tests below are exact\n    th = mix(threshold, th_s, c10);\n    th = abs(th - threshold) < 0.0001 ? threshold : th;\n    ra = mix(ratio, ra_s, c10);\n    ra = abs(ra - ratio) < 0.00001 ? ratio : ra;\n    at = mix(attack, at_s, c10);\n    at = abs(at - attack) < 0.0001 ? attack : at;\n    re = mix(release, re_s, c10);\n    re = abs(re - release) < 0.0001 ? release : re;\n    kn = mix(knee, kn_s, c10);\n    kn = abs(kn - knee) < 0.0001 ? knee : kn;\n    mk = mix(makeup, mk_s, c10);\n    mk = abs(mk - makeup) < 0.0001 ? makeup : mk;\n    am = mix(automakeup, am_s, c10);\n    am = abs(am - automakeup) < 0.000001 ? automakeup : am;\n    dw = mix(drywet, dw_s, c10);\n    dw = abs(dw - drywet) < 0.000001 ? drywet : dw;\n    de = mix(detect, de_s, c10);\n    de = abs(de - detect) < 0.000001 ? detect : de;\n    sc = mix(sidechain, sc_s, c10);\n    sc = abs(sc - sidechain) < 0.000001 ? sidechain : sc;\n\n    // --- attack/release coefficients: only when they move ---\n    aa = aa_c;\n    if (at != at_last || sr_new) {\n        aa = exp(-1 / mstosamps(at));\n    }\n    ar = ar_c;\n    if (re != re_last || sr_new) {\n        ar = exp(-1 / mstosamps(re));\n    }\n\n    // --- knee start as a plain level: only when threshold or knee move ---\n    w = max(kn, 0.001);\n    klin = klin_c;\n    if (th != knee_key_th || kn != knee_key_kn) {\n        klin = dbtoa(th - w * 0.5);\n    }\n\n    // --- detector key, crossfaded own input <-> sidechain; linked ---\n    kl = mix(in1, in3, sc);\n    kr = mix(in2, in4, sc);\n    pk = max(abs(kl), abs(kr));\n    ms = mix(pk * pk, ms_env, c10);\n    lvl = pk;\n    if (de > 0) {\n        lvl = mix(pk, sqrt(ms), de);\n    }\n\n    // --- gain computer: below the knee it is exactly 0, so the log is skipped ---\n    slope = 1 / ra - 1;\n    gc = 0;\n    x_db = 0;\n    over = 0;\n    k = 0;\n    if (lvl > klin) {\n        x_db = atodb(max(lvl, 0.000001));\n        over = x_db - th;\n        if (over >= w * 0.5) {\n            gc = slope * over;\n        } else {\n            k = over + w * 0.5;\n            gc = slope * k * k / (2 * w);\n        }\n    }\n\n    // --- attack/release smoothing on the gain, in dB ---\n    g_prev = gr_db;\n    coef = gc < g_prev ? aa : ar;\n    g = mix(gc, g_prev, coef);\n    // release finished: snap to exactly 0 so the output gain can be cached\n    g = (gc == 0 && g > -0.0001) ? 0 : g;\n\n    // --- makeup: when released, the gain is makeup only, cached until makeup moves ---\n    auto_db = am * -th * (1 - 1 / ra) * 0.5;\n    base = mk + auto_db;\n    // makeup-only gain, refreshed whenever makeup moves, so idle always has the current value\n    gst = gst_c;\n    if (base != base_last) {\n        gst = dbtoa(base);\n    }\n    gain = gst;\n    if (g != 0) {\n        gain = dbtoa(g + base);\n    }\n\n    // every smoother on target: allows idle next time\n    settled = th == threshold && ra == ratio && at == attack && re == release && kn == knee && mk == makeup && am == automakeup && dw == drywet && de == detect && sc == sidechain;\n} else {\n    // idle: release continues as a plain multiply because the gain computer is 0; RMS keeps decaying\n    ms = mix(q * q, ms_env, c10);\n    g = ar_c * gr_db;\n    g = g > -0.0001 ? 0 : g;\n    // input is below -120 dBFS here, so the makeup-only gain is exact to far below hearing\n    gain = gst_c;\n}\n\nout1 = mix(in1, in1 * gain, dw);\nout2 = mix(in2, in2 * gain, dw);\nout3 = -g;\n\n// --- write all state last ---\nms_env = ms;\ngr_db = g;\nth_s = th;\nra_s = ra;\nat_s = at;\nre_s = re;\nkn_s = kn;\nmk_s = mk;\nam_s = am;\ndw_s = dw;\nde_s = de;\nsc_s = sc;\nsr_last = sr;\nc10_c = c10;\nat_last = at;\naa_c = aa;\nre_last = re;\nar_c = ar;\nknee_key_th = th;\nknee_key_kn = kn;\nklin_c = klin;\nbase_last = base;\ngst_c = gst;\nsettled_s = settled;\nr5 = in5;\nr6 = in6;\nr7 = in7;\nr8 = in8;\nr9 = in9;\nr10 = in10;\nr11 = in11;\nr12 = in12;\nr13 = in13;\nr14 = in14;\n",
-                                    "fontface": 0,
-                                    "fontname": "<Monospaced>",
-                                    "fontsize": 12.0,
-                                    "id": "obj-15",
-                                    "maxclass": "codebox",
-                                    "numinlets": 14,
-                                    "numoutlets": 3,
-                                    "outlettype": [
-                                        "",
-                                        "",
-                                        ""
-                                    ],
-                                    "patching_rect": [
-                                        50.0,
-                                        80.0,
-                                        400.0,
-                                        200.0
-                                    ]
-                                }
-                            },
-                            {
-                                "box": {
-                                    "fontname": "Arial",
-                                    "fontsize": 12.0,
-                                    "id": "obj-16",
-                                    "linecount": 8,
-                                    "maxclass": "newobj",
-                                    "numinlets": 1,
-                                    "numoutlets": 0,
-                                    "patching_rect": [
-                                        50.0,
-                                        320.0,
-                                        30.0,
-                                        22.0
-                                    ],
-                                    "text": "out 1 @comment Audio L"
-                                }
-                            },
-                            {
-                                "box": {
-                                    "fontname": "Arial",
-                                    "fontsize": 12.0,
-                                    "id": "obj-17",
-                                    "linecount": 8,
-                                    "maxclass": "newobj",
-                                    "numinlets": 1,
-                                    "numoutlets": 0,
-                                    "patching_rect": [
-                                        130.0,
-                                        320.0,
-                                        30.0,
-                                        22.0
-                                    ],
-                                    "text": "out 2 @comment Audio R"
-                                }
-                            },
-                            {
-                                "box": {
-                                    "fontname": "Arial",
-                                    "fontsize": 12.0,
-                                    "id": "obj-18",
-                                    "linecount": 12,
-                                    "maxclass": "newobj",
-                                    "numinlets": 1,
-                                    "numoutlets": 0,
-                                    "patching_rect": [
-                                        210.0,
-                                        320.0,
-                                        30.0,
-                                        22.0
-                                    ],
-                                    "text": "out 3 @comment Gain reduction dB"
-                                }
-                            }
-                        ],
-                        "lines": [
-                            {
-                                "patchline": {
-                                    "destination": [
-                                        "obj-15",
-                                        0
-                                    ],
-                                    "source": [
-                                        "obj-1",
-                                        0
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [
-                                        "obj-15",
-                                        9
-                                    ],
-                                    "source": [
-                                        "obj-10",
-                                        0
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [
-                                        "obj-15",
-                                        10
-                                    ],
-                                    "source": [
-                                        "obj-11",
-                                        0
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [
-                                        "obj-15",
-                                        11
-                                    ],
-                                    "source": [
-                                        "obj-12",
-                                        0
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [
-                                        "obj-15",
-                                        12
-                                    ],
-                                    "source": [
-                                        "obj-13",
-                                        0
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [
-                                        "obj-15",
-                                        13
-                                    ],
-                                    "source": [
-                                        "obj-14",
-                                        0
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [
-                                        "obj-16",
-                                        0
-                                    ],
-                                    "source": [
-                                        "obj-15",
-                                        0
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [
-                                        "obj-17",
-                                        0
-                                    ],
-                                    "source": [
-                                        "obj-15",
-                                        1
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [
-                                        "obj-18",
-                                        0
-                                    ],
-                                    "source": [
-                                        "obj-15",
-                                        2
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [
-                                        "obj-15",
-                                        1
-                                    ],
-                                    "source": [
-                                        "obj-2",
-                                        0
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [
-                                        "obj-15",
-                                        2
-                                    ],
-                                    "source": [
-                                        "obj-3",
-                                        0
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [
-                                        "obj-15",
-                                        3
-                                    ],
-                                    "source": [
-                                        "obj-4",
-                                        0
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [
-                                        "obj-15",
-                                        4
-                                    ],
-                                    "source": [
-                                        "obj-5",
-                                        0
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [
-                                        "obj-15",
-                                        5
-                                    ],
-                                    "source": [
-                                        "obj-6",
-                                        0
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [
-                                        "obj-15",
-                                        6
-                                    ],
-                                    "source": [
-                                        "obj-7",
-                                        0
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [
-                                        "obj-15",
-                                        7
-                                    ],
-                                    "source": [
-                                        "obj-8",
-                                        0
-                                    ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [
-                                        "obj-15",
-                                        8
-                                    ],
-                                    "source": [
-                                        "obj-9",
-                                        0
-                                    ]
-                                }
-                            }
-                        ]
-                    },
                     "patching_rect": [
                         7.175791144371033,
                         398.681329369545,
                         853.7142850160599,
                         22.0
-                    ],
-                    "text": "gen~ @title br.comp.1.1",
-                    "varname": "br_comp"
+                    ]
                 }
             },
             {
@@ -1550,7 +913,7 @@
                         401.0,
                         75.0
                     ],
-                    "text": "one gen~, linked stereo: the louder of L/R (or of the sidechain pair) drives both channels. gen~ inputs: 1-2 audio, 3-4 sidechain, 5-14 controls (outer inlets 13-14 are the sidechain) Each control also goes [t f f] -> [change] -> [prepend <name>] -> the State outlet (last): the panel's settings as named messages."
+                    "text": "[br.comp.1.2] is the real object: the gen~ lives inside it (one gen~, linked stereo; Dry/Wet and Detect go in as %). This file adds the dials, the GR meter and the State outlet: each control goes [t f f] -> [change] -> [prepend <name>] -> State (last)."
                 }
             },
             {
@@ -1806,7 +1169,7 @@
             },
             {
                 "box": {
-                    "annotation": "br.comp.1.1 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/ -- Credits: soft-knee gain computer and dB-domain gain smoothing from D. Giannoulis, M. Massberg and J. D. Reiss, \"Digital Dynamic Range Compressor Design -- A Tutorial and Analysis\", Journal of the Audio Engineering Society 60(6), 2012.",
+                    "annotation": "br.comp.ui.1.2 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/ -- Credits: soft-knee gain computer and dB-domain gain smoothing from D. Giannoulis, M. Massberg and J. D. Reiss, \"Digital Dynamic Range Compressor Design -- A Tutorial and Analysis\", Journal of the Audio Engineering Society 60(6), 2012.",
                     "background": 1,
                     "bgcolor": [
                         0.0,
@@ -1820,7 +1183,7 @@
                         0.0,
                         1.0
                     ],
-                    "hint": "br.comp.1.1 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/ -- Credits: soft-knee gain computer and dB-domain gain smoothing from D. Giannoulis, M. Massberg and J. D. Reiss, \"Digital Dynamic Range Compressor Design -- A Tutorial and Analysis\", Journal of the Audio Engineering Society 60(6), 2012.",
+                    "hint": "br.comp.ui.1.2 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/ -- Credits: soft-knee gain computer and dB-domain gain smoothing from D. Giannoulis, M. Massberg and J. D. Reiss, \"Digital Dynamic Range Compressor Design -- A Tutorial and Analysis\", Journal of the Audio Engineering Society 60(6), 2012.",
                     "id": "obj-55",
                     "maxclass": "panel",
                     "mode": 0,
@@ -2541,140 +1904,6 @@
             {
                 "patchline": {
                     "destination": [
-                        "obj-38",
-                        2
-                    ],
-                    "midpoints": [
-                        924.5,
-                        170.4706218226711,
-                        145.0933734545341,
-                        170.4706218226711
-                    ],
-                    "source": [
-                        "obj-14",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-38",
-                        3
-                    ],
-                    "midpoints": [
-                        999.5,
-                        193.95557612771154,
-                        209.30216460961563,
-                        193.95557612771154
-                    ],
-                    "source": [
-                        "obj-15",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-38",
-                        0
-                    ],
-                    "source": [
-                        "obj-2",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-38",
-                        1
-                    ],
-                    "source": [
-                        "obj-3",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-38",
-                        11
-                    ],
-                    "source": [
-                        "obj-32",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-38",
-                        12
-                    ],
-                    "source": [
-                        "obj-35",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-44",
-                        0
-                    ],
-                    "source": [
-                        "obj-38",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-45",
-                        0
-                    ],
-                    "source": [
-                        "obj-38",
-                        1
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-46",
-                        0
-                    ],
-                    "order": 1,
-                    "source": [
-                        "obj-38",
-                        2
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-47",
-                        0
-                    ],
-                    "order": 0,
-                    "source": [
-                        "obj-38",
-                        2
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
                         "obj-16",
                         0
                     ],
@@ -2808,18 +2037,6 @@
                 "patchline": {
                     "source": [
                         "obj-st0t",
-                        1
-                    ],
-                    "destination": [
-                        "obj-38",
-                        4
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "source": [
-                        "obj-st0t",
                         0
                     ],
                     "destination": [
@@ -2861,18 +2078,6 @@
                     "destination": [
                         "obj-st1t",
                         0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "source": [
-                        "obj-st1t",
-                        1
-                    ],
-                    "destination": [
-                        "obj-38",
-                        5
                     ]
                 }
             },
@@ -2928,18 +2133,6 @@
                 "patchline": {
                     "source": [
                         "obj-st2t",
-                        1
-                    ],
-                    "destination": [
-                        "obj-38",
-                        6
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "source": [
-                        "obj-st2t",
                         0
                     ],
                     "destination": [
@@ -2981,18 +2174,6 @@
                     "destination": [
                         "obj-st3t",
                         0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "source": [
-                        "obj-st3t",
-                        1
-                    ],
-                    "destination": [
-                        "obj-38",
-                        7
                     ]
                 }
             },
@@ -3048,18 +2229,6 @@
                 "patchline": {
                     "source": [
                         "obj-st4t",
-                        1
-                    ],
-                    "destination": [
-                        "obj-38",
-                        8
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "source": [
-                        "obj-st4t",
                         0
                     ],
                     "destination": [
@@ -3101,18 +2270,6 @@
                     "destination": [
                         "obj-st5t",
                         0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "source": [
-                        "obj-st5t",
-                        1
-                    ],
-                    "destination": [
-                        "obj-38",
-                        9
                     ]
                 }
             },
@@ -3168,18 +2325,6 @@
                 "patchline": {
                     "source": [
                         "obj-st6t",
-                        1
-                    ],
-                    "destination": [
-                        "obj-38",
-                        10
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "source": [
-                        "obj-st6t",
                         0
                     ],
                     "destination": [
@@ -3220,18 +2365,6 @@
                     ],
                     "destination": [
                         "obj-st7t",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "source": [
-                        "obj-st7t",
-                        1
-                    ],
-                    "destination": [
-                        "obj-32",
                         0
                     ]
                 }
@@ -3288,18 +2421,6 @@
                 "patchline": {
                     "source": [
                         "obj-st8t",
-                        1
-                    ],
-                    "destination": [
-                        "obj-35",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "source": [
-                        "obj-st8t",
                         0
                     ],
                     "destination": [
@@ -3348,18 +2469,6 @@
                 "patchline": {
                     "source": [
                         "obj-st9t",
-                        1
-                    ],
-                    "destination": [
-                        "obj-38",
-                        13
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "source": [
-                        "obj-st9t",
                         0
                     ],
                     "destination": [
@@ -3388,6 +2497,222 @@
                     ],
                     "destination": [
                         "obj-state",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "obj-2",
+                        0
+                    ],
+                    "destination": [
+                        "obj-38",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "obj-3",
+                        0
+                    ],
+                    "destination": [
+                        "obj-38",
+                        1
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "obj-14",
+                        0
+                    ],
+                    "destination": [
+                        "obj-38",
+                        12
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "obj-15",
+                        0
+                    ],
+                    "destination": [
+                        "obj-38",
+                        13
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "obj-st0t",
+                        1
+                    ],
+                    "destination": [
+                        "obj-38",
+                        2
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "obj-st1t",
+                        1
+                    ],
+                    "destination": [
+                        "obj-38",
+                        3
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "obj-st2t",
+                        1
+                    ],
+                    "destination": [
+                        "obj-38",
+                        4
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "obj-st3t",
+                        1
+                    ],
+                    "destination": [
+                        "obj-38",
+                        5
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "obj-st4t",
+                        1
+                    ],
+                    "destination": [
+                        "obj-38",
+                        6
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "obj-st5t",
+                        1
+                    ],
+                    "destination": [
+                        "obj-38",
+                        7
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "obj-st6t",
+                        1
+                    ],
+                    "destination": [
+                        "obj-38",
+                        8
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "obj-st7t",
+                        1
+                    ],
+                    "destination": [
+                        "obj-38",
+                        9
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "obj-st8t",
+                        1
+                    ],
+                    "destination": [
+                        "obj-38",
+                        10
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "obj-st9t",
+                        1
+                    ],
+                    "destination": [
+                        "obj-38",
+                        11
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "obj-38",
+                        0
+                    ],
+                    "destination": [
+                        "obj-44",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "obj-38",
+                        1
+                    ],
+                    "destination": [
+                        "obj-45",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "obj-38",
+                        2
+                    ],
+                    "destination": [
+                        "obj-46",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "source": [
+                        "obj-38",
+                        2
+                    ],
+                    "destination": [
+                        "obj-47",
                         0
                     ]
                 }
