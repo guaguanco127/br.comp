@@ -1,6 +1,6 @@
 # Max/MSP Patches, Abstractions, Externals, RNBO, VSTs, and Ableton Max for Live 
 
-## br.comp.1.1
+## br.comp.1.2
 
 
 
@@ -9,19 +9,26 @@ By Brian Riordan
 [brianriordanmusic@gmail.com](mailto:brianriordanmusic@gmail.com)  
 [https://www.brianriordanmusic.com/](https://www.brianriordanmusic.com/) 
   
-Repository for br.comp.1.1, with all related files, can be found here: [https://github.com/guaguanco127/br.comp](https://github.com/guaguanco127/br.comp)  
+Repository for br.comp.1.2, with all related files, can be found here: [https://github.com/guaguanco127/br.comp](https://github.com/guaguanco127/br.comp)  
 Additional programs can be found here: [https://github.com/guaguanco127/br.max](https://github.com/guaguanco127/br.max)
 
 These files were created with Max 9. 
 
 ## Links
 
+[What's new in 1.2](#New12)  
 [What's new in 1.1](#New11)  
 [About](#About)   
 [State outlet](#State)  
 [Max/MSP Abstraction](https://github.com/guaguanco127/br.comp/tree/main/MaxMSP%20Abstraction) To use as an abstraction within Max/MSP   
 
 This is a Max/MSP-only release (no Max for Live device).
+
+## <a name="New12"></a>What's new in 1.2
+
+- **Two files:** br.comp.1.2 is the plain object, whose control inlets take signals as well as numbers (patch an LFO into Dry/Wet), and br.comp.ui.1.2 is the version with dials, the GR meter and the State outlet, for a [bpatcher].
+- Inlets, outlets and the sound are unchanged.
+- A new example tab, plain object: br.comp.1.2 on a drum loop, driven by number boxes and an LFO.
 
 ## <a name="New11"></a>What's new in 1.1
 
@@ -50,11 +57,13 @@ A linked stereo compressor for Max/MSP, built in gen~, whose controls mean exact
 
 **Light on CPU:** When the input is silent and nothing is moving, the compressor skips almost all of its work.
 
-The example patch (_br.comp.example.1.1.maxpat) has a tab for compressing a drum loop, a voice, uneven plucks or a microphone, and a tab where a drum loop ducks a drone through the sidechain inlets.
+**Signal control:** The plain br.comp.1.2 takes signals in every control inlet, so an LFO or envelope can move any setting.
+
+The example patch (_br.comp.example.1.2.maxpat) has a tab for compressing a drum loop, a voice, uneven plucks or a microphone, a tab where a drum loop ducks a drone through the sidechain inlets, a plain object tab with an LFO on Dry/Wet, and a State outlet tab.
 
 ## <a name="State"></a>State outlet
 
-The last outlet (State) sends the current settings as named messages the moment they change, for example `threshold -18.`, `ratio 4.`, `sidechain 1`. Use it to keep a display, Mira or another patch in sync. Pick them out by name with [route threshold ratio attack release knee makeup automakeup drywet detect sidechain], not by position, so your patch keeps working if a later version adds controls. Repeats are filtered out.
+The last outlet of br.comp.ui.1.2 (State) sends the current settings as named messages the moment they change, for example `threshold -18.`, `ratio 4.`, `sidechain 1`. Use it to keep a display, Mira or another patch in sync. Pick them out by name with [route threshold ratio attack release knee makeup automakeup drywet detect sidechain], not by position, so your patch keeps working if a later version adds controls. Repeats are filtered out.
 
 | Message | Type | Range |
 |---|---|---|
