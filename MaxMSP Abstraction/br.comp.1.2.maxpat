@@ -322,8 +322,8 @@
                         "rect": [
                             100.0,
                             100.0,
-                            600.0,
-                            450.0
+                            1130.0,
+                            526.0
                         ],
                         "boxes": [
                             {
@@ -339,9 +339,9 @@
                                         ""
                                     ],
                                     "patching_rect": [
-                                        50.0,
                                         20.0,
-                                        200.0,
+                                        20.0,
+                                        163.0,
                                         22.0
                                     ],
                                     "text": "in 1 @comment Audio L"
@@ -360,9 +360,9 @@
                                         ""
                                     ],
                                     "patching_rect": [
-                                        265.0,
+                                        198.0,
                                         20.0,
-                                        200.0,
+                                        163.0,
                                         22.0
                                     ],
                                     "text": "in 2 @comment Audio R"
@@ -381,10 +381,10 @@
                                         ""
                                     ],
                                     "patching_rect": [
-                                        480.0,
+                                        376.0,
                                         20.0,
                                         200.0,
-                                        22.0
+                                        36.0
                                     ],
                                     "text": "in 3 @comment Sidechain key L"
                                 }
@@ -402,10 +402,10 @@
                                         ""
                                     ],
                                     "patching_rect": [
-                                        695.0,
+                                        591.0,
                                         20.0,
                                         200.0,
-                                        22.0
+                                        36.0
                                     ],
                                     "text": "in 4 @comment Sidechain key R"
                                 }
@@ -423,10 +423,10 @@
                                         ""
                                     ],
                                     "patching_rect": [
-                                        50.0,
-                                        50.0,
+                                        806.0,
+                                        20.0,
                                         200.0,
-                                        22.0
+                                        36.0
                                     ],
                                     "text": "in 5 @comment Threshold dB -60 to 0 @default -18"
                                 }
@@ -444,10 +444,10 @@
                                         ""
                                     ],
                                     "patching_rect": [
-                                        265.0,
-                                        50.0,
+                                        20.0,
+                                        66.0,
                                         200.0,
-                                        22.0
+                                        36.0
                                     ],
                                     "text": "in 6 @comment Ratio N:1 1 to 20 @default 4"
                                 }
@@ -465,10 +465,10 @@
                                         ""
                                     ],
                                     "patching_rect": [
-                                        480.0,
-                                        50.0,
+                                        235.0,
+                                        66.0,
                                         200.0,
-                                        22.0
+                                        36.0
                                     ],
                                     "text": "in 7 @comment Attack ms 0.1 to 200 @default 10"
                                 }
@@ -486,10 +486,10 @@
                                         ""
                                     ],
                                     "patching_rect": [
-                                        695.0,
-                                        50.0,
+                                        450.0,
+                                        66.0,
                                         200.0,
-                                        22.0
+                                        36.0
                                     ],
                                     "text": "in 8 @comment Release ms 5 to 2000 @default 150"
                                 }
@@ -507,10 +507,10 @@
                                         ""
                                     ],
                                     "patching_rect": [
-                                        910.0,
-                                        50.0,
+                                        665.0,
+                                        66.0,
                                         200.0,
-                                        22.0
+                                        36.0
                                     ],
                                     "text": "in 9 @comment Knee dB 0 to 24 @default 6"
                                 }
@@ -528,10 +528,10 @@
                                         ""
                                     ],
                                     "patching_rect": [
-                                        50.0,
-                                        80.0,
+                                        880.0,
+                                        66.0,
                                         200.0,
-                                        22.0
+                                        36.0
                                     ],
                                     "text": "in 10 @comment Makeup dB -12 to 24 @default 0"
                                 }
@@ -549,10 +549,10 @@
                                         ""
                                     ],
                                     "patching_rect": [
-                                        265.0,
-                                        80.0,
+                                        20.0,
+                                        112.0,
                                         200.0,
-                                        22.0
+                                        36.0
                                     ],
                                     "text": "in 11 @comment Auto makeup 0/1 @default 0"
                                 }
@@ -570,10 +570,10 @@
                                         ""
                                     ],
                                     "patching_rect": [
-                                        480.0,
-                                        80.0,
+                                        235.0,
+                                        112.0,
                                         200.0,
-                                        22.0
+                                        36.0
                                     ],
                                     "text": "in 12 @comment Dry/wet % 0 to 100 @default 100"
                                 }
@@ -591,10 +591,10 @@
                                         ""
                                     ],
                                     "patching_rect": [
-                                        695.0,
-                                        80.0,
+                                        450.0,
+                                        112.0,
                                         200.0,
-                                        22.0
+                                        36.0
                                     ],
                                     "text": "in 13 @comment Detect % 0 peak to 100 RMS @default 0"
                                 }
@@ -612,10 +612,10 @@
                                         ""
                                     ],
                                     "patching_rect": [
-                                        910.0,
-                                        80.0,
+                                        665.0,
+                                        112.0,
                                         200.0,
-                                        22.0
+                                        36.0
                                     ],
                                     "text": "in 14 @comment Sidechain on 0/1 @default 0"
                                 }
@@ -636,8 +636,8 @@
                                         ""
                                     ],
                                     "patching_rect": [
-                                        50.0,
-                                        160.0,
+                                        20.0,
+                                        210.0,
                                         400.0,
                                         200.0
                                     ]
@@ -653,9 +653,9 @@
                                     "numinlets": 1,
                                     "numoutlets": 0,
                                     "patching_rect": [
-                                        50.0,
-                                        400.0,
-                                        30.0,
+                                        20.0,
+                                        440.0,
+                                        170.0,
                                         22.0
                                     ],
                                     "text": "out 1 @comment Audio L"
@@ -671,9 +671,9 @@
                                     "numinlets": 1,
                                     "numoutlets": 0,
                                     "patching_rect": [
-                                        130.0,
-                                        400.0,
-                                        30.0,
+                                        205.0,
+                                        440.0,
+                                        170.0,
                                         22.0
                                     ],
                                     "text": "out 2 @comment Audio R"
@@ -689,10 +689,10 @@
                                     "numinlets": 1,
                                     "numoutlets": 0,
                                     "patching_rect": [
-                                        210.0,
-                                        400.0,
-                                        30.0,
-                                        22.0
+                                        390.0,
+                                        440.0,
+                                        200.0,
+                                        36.0
                                     ],
                                     "text": "out 3 @comment Gain reduction dB"
                                 }
@@ -705,9 +705,9 @@
                                     "maxclass": "newobj",
                                     "text": "* 0.01",
                                     "patching_rect": [
-                                        480.0,
-                                        115.0,
-                                        60.0,
+                                        235.0,
+                                        158.0,
+                                        58.0,
                                         22.0
                                     ],
                                     "numinlets": 2,
@@ -725,9 +725,9 @@
                                     "maxclass": "newobj",
                                     "text": "* 0.01",
                                     "patching_rect": [
-                                        695.0,
-                                        115.0,
-                                        60.0,
+                                        450.0,
+                                        158.0,
+                                        58.0,
                                         22.0
                                     ],
                                     "numinlets": 2,
